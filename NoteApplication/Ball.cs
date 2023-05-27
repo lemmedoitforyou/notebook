@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace NoteApplication
 {
-    internal class Ball : Control, IBall
+    public class Ball : Control, IBall
     {
         public event EventHandler CircleClicked;
         private Dictionary<Color, int> colorScore = new Dictionary<Color, int>()

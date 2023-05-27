@@ -4,10 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace NoteApplication
 {
-    internal class FileInfo
+    public class FileInfo
     {
         public string Name { get; set; }
         public string Content { get; set; }
@@ -36,25 +37,27 @@ namespace NoteApplication
                 Content = string.Empty;
             }
         }
-
-        public bool SaveUpdates(string fileName, string content)
+    }
+    public static class GameFormExtensions
+    {
+        public static bool SaveUpdates(this FileInfo finfo, string fileName, string content)
         {
-            string directoryPath = Path.GetDirectoryName(FilePath);
+            string directoryPath = Path.GetDirectoryName(finfo.FilePath);
             string newFilePath = Path.Combine(directoryPath, fileName);
             if (!fileName.EndsWith(".txt"))
             {
                 return false;
             }
-            Name = fileName;
-            Content = content;
+            finfo.Name = fileName;
+            finfo.Content = content;
 
-            if (!string.Equals(FilePath, newFilePath, StringComparison.OrdinalIgnoreCase))
+            if (!string.Equals(finfo.FilePath, newFilePath, StringComparison.OrdinalIgnoreCase))
             {
-                File.Move(FilePath, newFilePath);
-                FilePath = newFilePath;
+                File.Move(finfo.FilePath, newFilePath);
+                finfo.FilePath = newFilePath;
             }
 
-            File.WriteAllText(newFilePath, Content);
+            File.WriteAllText(newFilePath, finfo.Content);
             return true;
         }
     }

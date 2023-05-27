@@ -42,6 +42,7 @@
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
+            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
             this.titleLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleLabel.ForeColor = System.Drawing.Color.DarkMagenta;
             this.titleLabel.Location = new System.Drawing.Point(450, 11);
@@ -52,6 +53,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.BackColor = System.Drawing.Color.Transparent;
             this.saveButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saveButton.ForeColor = System.Drawing.Color.DarkMagenta;
             this.saveButton.Location = new System.Drawing.Point(12, 490);
@@ -60,11 +62,12 @@
             this.saveButton.Size = new System.Drawing.Size(109, 54);
             this.saveButton.TabIndex = 1;
             this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // deleteButton
             // 
+            this.deleteButton.BackColor = System.Drawing.Color.Transparent;
             this.deleteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.deleteButton.ForeColor = System.Drawing.Color.DarkMagenta;
             this.deleteButton.Location = new System.Drawing.Point(127, 490);
@@ -73,11 +76,12 @@
             this.deleteButton.Size = new System.Drawing.Size(168, 54);
             this.deleteButton.TabIndex = 2;
             this.deleteButton.Text = "Delete";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // newNoteButton
             // 
+            this.newNoteButton.BackColor = System.Drawing.Color.Transparent;
             this.newNoteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.newNoteButton.ForeColor = System.Drawing.Color.DarkMagenta;
             this.newNoteButton.Location = new System.Drawing.Point(300, 490);
@@ -86,7 +90,7 @@
             this.newNoteButton.Size = new System.Drawing.Size(183, 54);
             this.newNoteButton.TabIndex = 3;
             this.newNoteButton.Text = "New Note";
-            this.newNoteButton.UseVisualStyleBackColor = true;
+            this.newNoteButton.UseVisualStyleBackColor = false;
             this.newNoteButton.Click += new System.EventHandler(this.newNoteButton_Click);
             // 
             // selectedFileComboBox
@@ -106,6 +110,7 @@
             // selectFileLabel
             // 
             this.selectFileLabel.AutoSize = true;
+            this.selectFileLabel.BackColor = System.Drawing.Color.Transparent;
             this.selectFileLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.selectFileLabel.ForeColor = System.Drawing.Color.DarkMagenta;
             this.selectFileLabel.Location = new System.Drawing.Point(15, 33);
@@ -117,6 +122,7 @@
             // fileNameLabel
             // 
             this.fileNameLabel.AutoSize = true;
+            this.fileNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.fileNameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.fileNameLabel.ForeColor = System.Drawing.Color.DarkMagenta;
             this.fileNameLabel.Location = new System.Drawing.Point(830, 57);
@@ -152,6 +158,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.BackgroundImage = global::NoteApplication.Properties.Resources._1662051311_2_oir_mobi_p_fon_s_serdechkami_dlya_storis_pinterest_2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1043, 558);
             this.Controls.Add(this.fileNameTextBox);
             this.Controls.Add(this.fileContentsRichTextBox);
@@ -162,6 +170,7 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.titleLabel);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(1061, 605);
             this.MinimumSize = new System.Drawing.Size(1061, 605);
