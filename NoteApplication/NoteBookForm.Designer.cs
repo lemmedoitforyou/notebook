@@ -171,6 +171,7 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.titleLabel);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.DarkMagenta;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(1061, 605);
             this.MinimumSize = new System.Drawing.Size(1061, 605);

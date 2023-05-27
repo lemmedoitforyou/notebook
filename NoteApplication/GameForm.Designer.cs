@@ -68,6 +68,7 @@
             this.recordsTable.AllowUserToResizeRows = false;
             this.recordsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.recordsTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.recordsTable.BackgroundColor = System.Drawing.Color.Thistle;
             this.recordsTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.recordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.recordsTable.Location = new System.Drawing.Point(189, 12);
@@ -121,6 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1043, 558);
             this.Controls.Add(this.mainMenuButton);
             this.Controls.Add(this.gameOverLabel);
@@ -129,6 +131,7 @@
             this.Controls.Add(this.recordsTable);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.startButton);
+            this.ForeColor = System.Drawing.Color.DarkMagenta;
             this.MaximumSize = new System.Drawing.Size(1061, 605);
             this.MinimumSize = new System.Drawing.Size(1061, 605);
             this.Name = "GameForm";
