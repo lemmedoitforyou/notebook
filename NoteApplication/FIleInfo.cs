@@ -20,23 +20,6 @@ namespace NoteApplication
             Name = Path.GetFileName(filePath);
             FilePath = filePath;
         }
-
-        private bool FileExists()
-        {
-            return System.IO.File.Exists(Name);
-        }
-
-        public void ReadContent()
-        {
-            if (FileExists())
-            {
-                Content = System.IO.File.ReadAllText(Name);
-            }
-            else
-            {
-                Content = string.Empty;
-            }
-        }
     }
     public static class GameFormExtensions
     {

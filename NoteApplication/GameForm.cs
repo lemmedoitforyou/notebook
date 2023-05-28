@@ -188,7 +188,7 @@ namespace NoteApplication
 
             UpdateHeartsLabel();
 
-            if (hearts == 0)
+            if (hearts >= 0)
             {
                 GameOver();
             }
@@ -217,15 +217,6 @@ namespace NoteApplication
                 File.WriteAllLines(recordsFile, lines);
             });
         }
-
-        private void playAgainButton_Click(object sender, EventArgs e)
-        {
-            Controls.Clear();
-            Controls.Add(startButton);
-            Controls.Add(recordsTable);
-            InitializeGame();
-        }
-
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();

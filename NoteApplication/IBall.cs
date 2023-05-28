@@ -11,6 +11,5 @@ namespace NoteApplication
     {
         void ScoreByColor(ref int hearts, ref int score);
         void BallDisappearHpHandler(ref int hearts, ref int score);
-        
     }
 }

@@ -9,19 +9,18 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.WebRequestMethods;
 
 namespace NoteApplication
 {
     public partial class NoteBookForm : Form
     {
         List<FileInfo> files = new List<FileInfo>();
-
+        private const string folderPath = "..\\..\\NoteBookFiles";
         public NoteBookForm()
         {
             InitializeComponent();
 
-            string[] filePaths = Directory.GetFiles("..\\..\\NoteBookFiles");
+            string[] filePaths = Directory.GetFiles(folderPath);
 
             foreach (string filePath in filePaths)
             {
@@ -40,15 +39,15 @@ namespace NoteApplication
             string baseFileName = "Note";
             int fileNumber = 1;
             string fileName = $"{baseFileName}{fileNumber}.txt";
-            string filePath = Path.Combine("..\\..\\NoteBookFiles", fileName);
+            string filePath = Path.Combine(folderPath, fileName);
 
             while (System.IO.File.Exists(filePath))
             {
                 fileNumber++;
                 fileName = $"{baseFileName}{fileNumber}.txt";
-                filePath = Path.Combine("..\\..\\NoteBookFiles", fileName);
+                filePath = Path.Combine(folderPath, fileName);
             }
-            string fileCreatePath = Path.Combine("..\\..\\NoteBookFiles", fileName);
+
             System.IO.File.WriteAllText(filePath, "");
 
             FileInfo newNote = new FileInfo(filePath);
